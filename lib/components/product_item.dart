@@ -17,10 +17,20 @@ class ProductItem extends StatelessWidget {
             product.title,
             textAlign: TextAlign.center,
           ),
-          leading:
-              IconButton(onPressed: () {}, icon: const Icon(Icons.favorite)),
+          leading: IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.favorite,
+              color: Theme.of(context).colorScheme.secondary,
+            ),
+          ),
           trailing: IconButton(
-              onPressed: () {}, icon: const Icon(Icons.shopping_cart)),
+            onPressed: () {},
+            icon: Icon(
+              Icons.shopping_cart,
+              color: Theme.of(context).colorScheme.secondary,
+            ),
+          ),
         ),
         child: Image.network(
           product.imageUrl,
