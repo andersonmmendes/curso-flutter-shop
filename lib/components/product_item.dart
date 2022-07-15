@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shop/models/product.dart';
 import 'package:shop/utils/app_routes.dart';
 
 class ProductItem extends StatelessWidget {
-  final Product product;
-
-  const ProductItem({Key? key, required this.product}) : super(key: key);
+  const ProductItem({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final product = Provider.of<Product>(context);
+
     return ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: GridTile(
@@ -19,9 +20,11 @@ class ProductItem extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              product.toggleFavorite();
+            },
             icon: Icon(
-              Icons.favorite,
+              product.isFavorite ? Icons.favorite : Icons.favorite_border,
               color: Theme.of(context).colorScheme.secondary,
             ),
           ),
