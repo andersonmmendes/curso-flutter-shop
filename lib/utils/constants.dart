@@ -1,6 +1,6 @@
 class Constants {
   static const user_favorite_baseurl =
-      'https://shop-cod3r-c6c00-default-rtdb.firebaseio.com/userFavorite';
+      'https://shop-cod3r-c6c00-default-rtdb.firebaseio.com/userFavorites';
 
   static const product_baseurl =
       'https://shop-cod3r-c6c00-default-rtdb.firebaseio.com/products';
