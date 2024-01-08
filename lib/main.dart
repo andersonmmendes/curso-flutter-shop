@@ -56,12 +56,14 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Flutter Demo',
         theme: theme.copyWith(
-            colorScheme: theme.colorScheme.copyWith(
-              primary: Colors.purple,
-              secondary: Colors.deepOrangeAccent,
-            ),
-            textTheme: theme.textTheme
-                .copyWith(headline6: const TextStyle(fontFamily: 'Lato'))),
+          colorScheme: theme.colorScheme.copyWith(
+            primary: Colors.purple,
+            secondary: Colors.deepOrangeAccent,
+          ),
+          textTheme: theme.textTheme.copyWith(
+            headline6: const TextStyle(fontFamily: 'Lato'),
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         initialRoute: AppRoutes.authOrHome,
         routes: {
